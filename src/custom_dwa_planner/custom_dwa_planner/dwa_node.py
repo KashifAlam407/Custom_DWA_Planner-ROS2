@@ -16,7 +16,7 @@ class SimpleDWANode(Node):
     def __init__(self):
         super().__init__('simple_dwa_node')
 
-        # ---------------- Robot state ----------------
+        ## Robot state 
         self.x = 0.0
         self.y = 0.0
         self.yaw = 0.0
@@ -90,14 +90,14 @@ class SimpleDWANode(Node):
         self.goal_received = True
         self.get_logger().info(f"🎯 Goal: {self.goal_x:.2f}, {self.goal_y:.2f}")
 
-    # ---------------- Helpers ----------------
+    ## Helper functions
     def normalize(self, a):
         return math.atan2(math.sin(a), math.cos(a))
 
     def distance_to_goal(self):
         return math.hypot(self.goal_x - self.x, self.goal_y - self.y)
 
-    # ---------------- Trajectory ----------------
+    ## Trajectories
     def predict(self, v, w):
         traj = []
         x, y, yaw = self.x, self.y, self.yaw
@@ -134,7 +134,7 @@ class SimpleDWANode(Node):
 
         self.marker_pub.publish(marker)
 
-    # ---------------- Control ----------------
+    ## Main control loop
     def control_loop(self):
         if not self.goal_received or self.front is None:
             return
@@ -152,7 +152,7 @@ class SimpleDWANode(Node):
             for w in self.w_samples:
                 traj = self.predict(v, w)
 
-                # 🔴 publish candidate trajectories
+                # publish candidate trajectories
                 self.publish_trajectory(traj, marker_id, (1.0, 0.0, 0.0))
                 marker_id += 1
 
@@ -175,7 +175,7 @@ class SimpleDWANode(Node):
                     best_w = w
                     best_traj = traj
 
-        # 🟢 publish best trajectory
+        # publish best trajectory
         if best_traj:
             self.publish_trajectory(best_traj, 999, (0.0, 1.0, 0.0))
 
@@ -189,3 +189,6 @@ def main():
     rclpy.init()
     rclpy.spin(SimpleDWANode())
     rclpy.shutdown()
+
+
+
