@@ -32,6 +32,20 @@ This implementation does NOT use Nav2, costmaps, or any built-in planners. All l
 
 -----------------------------------------------------------------------
 
+## Results & Demo
+
+### Simulation Output (Gazebo + RViz)
+
+<img src="assets/dwa_demo.png" width="700"/>
+
+### Video Demonstration
+
+[![Custom DWA Local Planner Demo](https://img.youtube.com/vi/1NOkW2mW9GI/0.jpg)](https://www.youtube.com/watch?v=1NOkW2mW9GI)
+
+▶ Click the image above to watch the full demo video on YouTube.
+
+-----------------------------------------------------------------------
+
 ## Requirements
 
 - ROS 2 (Humble or Iron recommended)
