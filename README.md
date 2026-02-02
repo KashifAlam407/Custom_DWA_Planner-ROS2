@@ -69,7 +69,7 @@ source install/setup.bash
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py  
 
 ### Run the planner node
-ros2 run simple_dwa_planner simple_dwa_node.py  
+ros2 run custom_dwa_planner dwa_node
 
 ### Open RViz
 rviz2  
