@@ -8,6 +8,21 @@ This implementation does NOT use Nav2, costmaps, or any built-in planners. All l
 
 -----------------------------------------------------------------------
 
+## Results & Demo
+
+### Simulation Output (Gazebo + RViz)
+
+<img src="assets/dwa_demo.png" width="700"/>
+
+### Video Demonstration
+
+[![Custom DWA Local Planner Demo](https://img.youtube.com/vi/1NOkW2mW9GI/0.jpg)](https://www.youtube.com/watch?v=1NOkW2mW9GI)
+
+▶ Click the image above to watch the full demo video on YouTube.
+
+-----------------------------------------------------------------------
+
+
 ## What this project does
 
 - Samples multiple linear and angular velocities
@@ -30,21 +45,7 @@ This implementation does NOT use Nav2, costmaps, or any built-in planners. All l
   - Green line: selected trajectory
 - Simple and readable code, easy to explain in interviews
 
------------------------------------------------------------------------
-
-## Results & Demo
-
-### Simulation Output (Gazebo + RViz)
-
-<img src="assets/dwa_demo.png" width="700"/>
-
-### Video Demonstration
-
-[![Custom DWA Local Planner Demo](https://img.youtube.com/vi/1NOkW2mW9GI/0.jpg)](https://www.youtube.com/watch?v=1NOkW2mW9GI)
-
-▶ Click the image above to watch the full demo video on YouTube.
-
------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 ## Requirements
 
